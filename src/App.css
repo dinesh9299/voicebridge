@@ -1,38 +1,96 @@
-.App {
-  text-align: center;
+/* DataTable.css */
+.table th,
+.table td {
+  text-align: center; /* Horizontal center alignment */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.name-header {
+  vertical-align: middle; /* Vertical center alignment */
+}
+.table-container {
+  overflow-x: auto;
+  white-space: nowrap;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.table th,
+.table td {
+  width: 120px; /* Fixed width for each column */
+  text-align: center; /* Center align text */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.table th {
+  background-color: #f8f9fa; /* Light background for header */
+}
+.tebl::-webkit-scrollbar {
+  display: none;
+  align-items: canter;
 }
 
-.App-link {
-  color: #61dafb;
+.caveat {
+  font-family: "Caveat", cursive;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
 }
 
-@keyframes App-logo-spin {
-  from {
+.caveat {
+  font-family: "Caveat", cursive;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.reggae-one-regular {
+  font-family: "Reggae One", system-ui;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.lora {
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  color: rgba(16, 64, 221, 0.479);
+}
+
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05); /* Scale up the card */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: inline-block;
+  border-top: 4px solid #fff;
+  border-right: 4px solid transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+.loader::after {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border-left: 4px solid #ff3d00;
+  border-bottom: 4px solid transparent;
+  animation: rotation 0.5s linear infinite reverse;
+}
+@keyframes rotation {
+  0% {
     transform: rotate(0deg);
   }
-  to {
+  100% {
     transform: rotate(360deg);
   }
 }
